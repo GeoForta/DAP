@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Fragment3">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="back" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="485dp"
+            android:text='În "Vrăjitoarea din pădurea întunecată", autorul ne introduce într-un univers al terorii și misterului. Povestea urmărește aventurile unei familii care se mută într-un mic sat într-o pădure densă și întunecată, cu o istorie încărcată de legende despre vrăjitoare și forțe supranaturale.'
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+
+</FrameLayout>
