@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FABFBF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Agenda"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="349dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/ionut"
+                android:layout_width="305dp"
+                android:layout_height="57dp"
+                android:background="#00FFFFFF"
+                android:text="Ionut" />
+
+            <Button
+                android:id="@+id/maria"
+                android:layout_width="305dp"
+                android:layout_height="57dp"
+                android:background="#00FFFFFF"
+                android:text="Maria" />
+
+            <Button
+                android:id="@+id/andrei"
+                android:layout_width="305dp"
+                android:layout_height="57dp"
+                android:background="#00FFFFFF"
+                android:text="Andrei" />
+
+            <Button
+                android:id="@+id/ana"
+                android:layout_width="305dp"
+                android:layout_height="57dp"
+                android:background="#00FFFFFF"
+                android:text="Ana" />
+
+            <Button
+                android:id="@+id/andreea"
+                android:layout_width="305dp"
+                android:layout_height="57dp"
+                android:background="#00FFFFFF"
+                android:text="Andreea" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
