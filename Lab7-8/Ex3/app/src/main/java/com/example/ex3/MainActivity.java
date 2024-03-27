@@ -1,5 +1,7 @@
 package com.example.ex3;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ComponentName;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private MyService Myservice;
     private char[][] tabla = new char[3][3];
     private boolean isBound = false;
+    String info1;
     EditText text1, text2, text3, text4, text5, text6, text7, text8, text9;
 
     private ServiceConnection connection = new ServiceConnection()
@@ -46,10 +49,13 @@ public class MainActivity extends AppCompatActivity {
         bindService(intent, connection, Context.BIND_AUTO_CREATE);
 
         text1 = findViewById(R.id.editTextText);
+
         text1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    Toast.makeText(getApplicationContext(), "Intra in text1" , Toast.LENGTH_SHORT).show();
+
                     String info1 = text1.getText().toString();
                     Myservice.placeSymbol(0, 0, info1.charAt(0));
                     return true;

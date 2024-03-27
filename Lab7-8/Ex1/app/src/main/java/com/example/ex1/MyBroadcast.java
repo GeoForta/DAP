@@ -23,9 +23,9 @@ public class MyBroadcast extends BroadcastReceiver {
            int levelBaterie = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 
            //verificam daca nivelul bateriei e scazut
-           if (levelBaterie < 20)
+           if (levelBaterie < 100)
            {
-               Toast.makeText(context, "Bateria e 20%", Toast.LENGTH_SHORT).show();
+               Toast.makeText(context, "Bateria e sub 100%", Toast.LENGTH_SHORT).show();
            }
        }
 

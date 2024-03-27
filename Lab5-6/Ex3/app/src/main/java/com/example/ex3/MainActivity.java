@@ -107,33 +107,31 @@ public class MainActivity extends AppCompatActivity {
         });
         AdaugareSing adaugareSing = AdaugareSing.getInstance();
         List<Persoana> persoaneList = adaugareSing.getPersoaneList();
+        Button buton;
 
         LinearLayout layout = findViewById(R.id.layout);
         for (Persoana persoana : persoaneList) {
-            final String nume = persoana.getNume();
-            final String prenume = persoana.getPrenume();
-            final String telefon = persoana.getTelefon();
-            final String adresa = persoana.getAdresa();
-
-            Button buton = new Button(this);
+            buton = new Button(this);
             buton.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
             ));
-            buton.setText(nume);
+            buton.setText(persoana.getNume());
+            layout.addView(buton);
+
             buton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent detaliiIntent = new Intent(MainActivity.this, detalii.class);
-                    detaliiIntent.putExtra("nume", nume);
-                    detaliiIntent.putExtra("prenume", prenume);
-                    detaliiIntent.putExtra("telefon", telefon);
-                    detaliiIntent.putExtra("adresa", adresa);
+                    detaliiIntent.putExtra("nume", persoana.getNume());
+                    detaliiIntent.putExtra("prenume", persoana.getPrenume());
+                    detaliiIntent.putExtra("telefon", persoana.getTelefon());
+                    detaliiIntent.putExtra("adresa", persoana.getAdresa());
                     startActivity(detaliiIntent);
                 }
             });
-            layout.addView(buton);
         }
 
     }
-}
+
+    }

@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
     Button reset,start,stop;
     int seconds, minutes, milliSeconds;
     long millisecond, startTime, timeBuff, updateTime = 0L;
-    Handler handler;
-    private final Runnable runnable = new Runnable()
+    Handler handler; //gestioneaza sarcinile ce trebuie executate pe f. principal
+    //este folosit pentru a actualiza interfata utilizatorului cu timpul curent
+    private final Runnable runnable = new Runnable()//timpul scurs din momentul inceperii cronometrului
     {
         @Override
         public void run()
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             milliSeconds = (int) (updateTime % 1000);
 
             text.setText(MessageFormat.format("{0}:{1}:{2}", minutes, String.format(Locale.getDefault(), "%02d", seconds),String.format(Locale.getDefault(),"%02d", milliSeconds)));
-            handler.postDelayed(this, 0);
+            handler.postDelayed(this, 0); //se actualizeaza textul in mod constant
 
         }
     };
@@ -62,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startTime = SystemClock.uptimeMillis();
+                startTime = SystemClock.uptimeMillis();// setam start time cu timpul actual al sistemului
 
                 handler.postDelayed(runnable, 0);
+                //incepem actualizarea cronometrului pe ecran
 
                 reset.setEnabled(false);
 
@@ -77,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timeBuff += millisecond;
-                handler.removeCallbacks(runnable);
+                timeBuff += millisecond; //pastram timpul scurs
+                handler.removeCallbacks(runnable);//oprim actualizeaza cron. oe ecran
                 reset.setEnabled(true);
 
                 stop.setEnabled(false);

@@ -16,6 +16,12 @@ public class Persoane {
         this.probleme = probleme;
     }
 
+    public Persoane()
+    {
+
+    }
+
+
     public void setNume(String nume)
     {
         this.nume = nume;

@@ -85,6 +85,7 @@
         android:id="@+id/salvare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Salvare"
         android:text="Salvare"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,71 +94,104 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.872" />
 
-    <ScrollView
-        android:id="@+id/scroll1"
-        android:layout_width="423dp"
-        android:layout_height="63dp"
+
+    <LinearLayout
+        android:id="@+id/firstPairLayout"
+        android:layout_width="415dp"
+        android:layout_height="77dp"
         android:layout_marginStart="4dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282">
+        app:layout_constraintVertical_bias="0.215">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/linear1"/>
-    </ScrollView>
+            android:layout_weight="1" />
 
-    <ScrollView
-        android:id="@+id/scroll2"
-        android:layout_width="413dp"
-        android:layout_height="57dp"
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondPairLayout"
+        android:layout_width="420dp"
+        android:layout_height="94dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342">
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:focusableInTouchMode="true"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Pereche2nr1"
+        android:layout_width="415dp"
+        android:layout_height="77dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374">
+        app:layout_constraintVertical_bias="0.477">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_weight="1" />
 
-    <ScrollView
-        android:id="@+id/scroll3"
-        android:layout_width="421dp"
-        android:layout_height="54dp"
+        <EditText
+            android:id="@+id/editText21"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Pereche2nr2"
+        android:layout_width="420dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449">
+        app:layout_constraintVertical_bias="0.61">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editText31"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_weight="10" />
 
-    <ScrollView
-        android:id="@+id/scroll4"
-        android:layout_width="419dp"
-        android:layout_height="65dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editText41"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
